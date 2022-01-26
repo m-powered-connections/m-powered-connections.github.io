@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>M-Powered</title>
@@ -342,7 +337,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p>Send any questions, comments, or feedback to:</p>
+						<button class="small" id="emailToCopy" onclick="myFunction()">m.powered.connections@gmail.com</button>
 					</footer>
 
 			</div>
@@ -359,3 +355,19 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
 	</body>
 </html>
+<script>
+	function myFunction() {
+		/* Get the text field */
+		var copyText = document.getElementById("emailToCopy");
+
+		/* Select the text field */
+		copyText.select();
+		copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+		/* Copy the text inside the text field */
+		navigator.clipboard.writeText(copyText.value);
+
+		/* Alert the copied text */
+		alert("Copied the text: " + copyText.value);
+	}
+</script>
